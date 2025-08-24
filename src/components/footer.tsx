@@ -32,22 +32,16 @@ export default function Footer() {
 
   const links = [
     {
-      name: "Threads",
-      url: "https://www.threads.com/@ray.realms",
-      icon: AtSign,
-      description: "追蹤我的最新動態"
-    },
-    {
       name: "個人網站",
-      url: "https://ray-realms.com/",
+      url: "https://holybear.tw/",
       icon: Globe,
-      description: "探索更多專案"
+      description: "前往我個人架設的技術部落格網站"
     },
     {
       name: "BuyMeACoffee",
-      url: "https://buymeacoffee.com/ray948787o",
+      url: "https://paypal.me/holybear0610",
       icon: Coffee,
-      description: "支持我的創作"
+      description: "贊助我"
     }
   ]
 
@@ -95,9 +89,9 @@ export default function Footer() {
                 <LinkIcon className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-black">Ray 貓</h3>
+                <h3 className="text-lg font-bold text-black">聖小熊</h3>
                 <p className="text-sm text-gray-600">
-                 這個網站的開發者，🚀 Vibe Coding 研究者 × 新創路上的 AI 工程師
+                 這個網站的開發者，🚀 網頁開發新手村村民，正在努力練功升級中！
                 </p>
               </div>
             </div>
@@ -156,23 +150,9 @@ export default function Footer() {
               </div>
 
               <div className="space-y-4 mb-8">
-                <a
-                  href="https://www.threads.com/@ray.realms"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-4 p-4 border border-gray-200 rounded-2xl hover:border-gray-300 hover:bg-gray-50 transition-all duration-200"
-                >
-                  <div className="w-10 h-10 bg-black rounded-xl flex items-center justify-center">
-                    <AtSign className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-black">追蹤 Threads</h4>
-                    <p className="text-sm text-gray-600">獲取最新動態與技術分享</p>
-                  </div>
-                </a>
 
                 <a
-                  href="https://buymeacoffee.com/ray948787o"
+                  href="https://paypal.me/holybear0610"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-4 p-4 border border-gray-200 rounded-2xl hover:border-gray-300 hover:bg-gray-50 transition-all duration-200"
