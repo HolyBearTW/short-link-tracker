@@ -1,31 +1,31 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { db } from '@/lib/db'
-import { recordClick } from '@/lib/short-url'
+import { NextRequest， NextResponse } 來自 'next/server'
+import { db } 來自 '@/lib/db'
+import { recordClick } 來自 '@/lib/short-url'
 
 export async function GET(
-  request: NextRequest,
+  request: NextRequest，
   context: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const { slug } = await context.params
+    const { slug } = await context。params
     
-    const link = await db.link.findUnique({
+    const link = await db。link。findUnique({
       where: { slug }
     })
 
     if (!link) {
-      return NextResponse.redirect(new URL(`/404`, request.url))
+      return NextResponse。redirect(new URL(`https://go.holybear.tw/404`， request。url))
     }
 
     // Record the click asynchronously
-    recordClick(link.id, request).catch(error => {
-      console.error('Failed to record click:', error)
+    recordClick(link。id， request)。catch(error => {
+      console。error('Failed to record click:'， error)
     })
 
     // Redirect to target URL
-    return NextResponse.redirect(link.targetUrl, { status: 302 })
+    return NextResponse。redirect(link。targetUrl， { status: 302 })
   } catch (error) {
-    console.error('Redirect error:', error)
-    return NextResponse.redirect(new URL(`/404`, request.url))
+    console。error('Redirect error:'， error)
+    return NextResponse。redirect(new URL(`https://go.holybear.tw/404`， request。url))
   }
 }
