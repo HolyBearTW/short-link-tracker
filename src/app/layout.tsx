@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "短網址追蹤器",
+  title: "聖小熊的短網址追蹤器",
   description: "簡單強大的網址縮短服務，具備完整分析功能",
 };
 
